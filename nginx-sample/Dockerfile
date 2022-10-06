@@ -1,7 +1,7 @@
-FROM nginx:1.15.8-alpine
+FROM nginx
 
 # Configuration
-copy ./nginx.conf /etc/nginx/nginx.conf
+copy default.conf /etc/nginx/conf.d/default.conf
 
 # Content
-copy ./*.html /usr/share/nginx/html/
+copy ./index.html /usr/share/nginx/html
